@@ -44,7 +44,11 @@ def hello(name)
 end
 
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  if string.chars[0] =~ /(?=[a-zA-Z])(?=[^aeiouAEIOU])/
+    true
+  else
+    false
+  end
 end
 
 def binary_multiple_of_4?(string)
