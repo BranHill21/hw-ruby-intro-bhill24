@@ -11,7 +11,14 @@ def sum(arr)
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE
+  if arr.empty?
+    0
+  elseif arr.length < 2
+    arr[0]
+  else
+    arr.sort
+    sum([arr[0], arr[1]])
+  end
 end
 
 def sum_to_n?(arr, number)
