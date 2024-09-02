@@ -25,7 +25,15 @@ def sum_to_n?(arr, number)
   if arr.length < 2
     false
   else
-    0
+    n = arr.length - 1
+    n.times do |i|
+      for j in (i + 1)..n
+        if sum([arr[i], arr[j]]) == number
+          return true
+        end
+      end
+    end
+    return false
   end
 end
 
