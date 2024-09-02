@@ -13,11 +13,11 @@ end
 def max_2_sum(arr)
   if arr.empty?
     0
-  elseif arr.length < 2
+  elsif arr.length < 2
     arr[0]
   else
-    arr.sort
-    sum([arr[0], arr[1]])
+    sorted_arr = arr.sort { |a, b| b <=> a }
+    sum([sorted_arr[0], sorted_arr[1]])
   end
 end
 
