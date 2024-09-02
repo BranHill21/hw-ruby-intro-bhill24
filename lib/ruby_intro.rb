@@ -22,7 +22,11 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, number)
-  # YOUR CODE HERE
+  if arr.length < 2
+    false
+  else
+    0
+  end
 end
 
 # Part 2
