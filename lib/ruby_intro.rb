@@ -3,7 +3,11 @@
 # Part 1
 
 def sum(arr)
-  0
+  if arr.empty?
+    0
+  else
+    arr.compact.inject(:+) 
+  end
 end
 
 def max_2_sum(arr)
