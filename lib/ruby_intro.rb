@@ -52,7 +52,16 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
+  converted_string = string.to_i
+  if converted_string.to_s == string
+    if converted_string % 100 == 0
+      return true
+    else
+      return false
+    end
+  else
+    return false
+  end
 end
 
 # Part 3
