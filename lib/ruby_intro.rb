@@ -86,7 +86,8 @@ class BookInStock
   # Getter and Setter for isbn and price
   attr_accessor :isbn, :price
 
+  # return the price with the dollar sign and 2 decimals
   def price_as_string
-    #todo
+    "$%0.2f" % [price]
   end
 end
