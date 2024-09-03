@@ -83,9 +83,10 @@ class BookInStock
     end
   end
 
-  # Getter and Setter for isbn
-  attr_accessor :isbn
+  # Getter and Setter for isbn and price
+  attr_accessor :isbn, :price
 
-  # Getter and Setter for price
-  attr_accessor :price
+  def price_as_string
+    #todo
+  end
 end
