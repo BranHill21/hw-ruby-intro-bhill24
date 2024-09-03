@@ -69,9 +69,18 @@ end
 # Object representing a book
 class BookInStock
   # Initialize the class with the isbn and price
-  def initialize(id, cost)
-    @isbn = id
-    @price = cost
+  def initialize(isbn, price)
+    if isbn.empty? || isbn.nil? # If the isbn is nil or empty then raise error
+      raise ArgumentError, "Invalid ISBN number"
+    else # If isbn is good then set the variable
+      @isbn = isbn
+    end
+
+    if price <= 0 # if price is less than or equal to 0 then raise error
+      raise ArgumentError, "Price must be greater than zero"
+    else # If price is good then set the variable
+      @price = price
+    end
   end
 
   # Getter and Setter for isbn
