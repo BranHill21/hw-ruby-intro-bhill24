@@ -68,5 +68,15 @@ end
 
 # Object representing a book
 class BookInStock
-  # YOUR CODE HERE
+  # Initialize the class with the isbn and price
+  def initialize(id, cost)
+    @isbn = id
+    @price = cost
+  end
+
+  # Getter and Setter for isbn
+  attr_accessor :isbn
+
+  # Getter and Setter for price
+  attr_accessor :price
 end
